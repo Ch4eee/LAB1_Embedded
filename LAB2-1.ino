@@ -2,11 +2,11 @@
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
-#define BLYNK_AUTH_TOKEN "pNKDVwcnaxMMmhEaTvRVKU2ioY_ijD9L"
+#define BLYNK_AUTH_TOKEN "NkjVq23XELM5oV3sSJhPZ2XzgFWzuLE8"
 
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "July15";//Enter your WIFI name
-char pass[] = "bu$t4rd3";//Enter your WIFI password
+char ssid[] = "adamseif";//wifi name
+char pass[] = "franasen23";//wifi password
 
 
 const int A = 12;
@@ -229,42 +229,45 @@ void f(){
 
 BLYNK_WRITE(V0) {
 
-   zero();
-  delay(1000);
-  one();
-  delay(1000);
-  two();
-  delay(1000);
-  three();
-  delay(1000);
-  four();
-  delay(1000);           
-  five();
-  delay(1000);
-  six();
-  delay(1000);
-  seven();
-  delay(1000);
-  eight();
-  delay(1000);
-  nine();
-  delay(1000);           
-  a();
-  delay(1000);
-  b();
-  delay(1000);
-  c();
-  delay(1000);
-  d();
-  delay(1000);
-  e();
-  delay(1000);
-  f();
-  delay(1000);
-
+    count:
+    zero();
+    delay(1000);
+    one();
+    delay(1000);
+    two();
+    delay(1000);
+    three();
+    delay(1000);
+    four();
+    delay(1000);           
+    five();
+    delay(1000);
+    six();
+    delay(1000);
+    seven();
+    delay(1000);
+    eight();
+    delay(1000);
+    nine();
+    delay(1000);           
+    a();
+    delay(1000);
+    b();
+    delay(1000);
+    c();
+    delay(1000);
+    d();
+    delay(1000);
+    e();
+    delay(1000);
+    f();
+    delay(1000);
+    goto count;
+    
 }
+
 void setup() {
-  //Set the LED pin as an output pin
+  
   pinMode(A, OUTPUT);
   pinMode(B, OUTPUT);
   pinMode(C, OUTPUT);
@@ -273,15 +276,12 @@ void setup() {
   pinMode(F, OUTPUT);
   pinMode(G, OUTPUT);
   pinMode(DP, OUTPUT);
-  //Initialize the Blynk library
   Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
+  
 }
 
 void loop() {
-  //Run the Blynk library
+ 
   Blynk.run();
+  
 }
-
-
-
-
