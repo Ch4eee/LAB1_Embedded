@@ -17,6 +17,7 @@ const int E = 4;
 const int F = 13;
 const int G = 15;
 const int DP = 0;
+int del = 500;
 
 void zero(){
 
@@ -228,42 +229,44 @@ void f(){
 
 
 BLYNK_WRITE(V0) {
-
-    count:
+ 
+  if(param.asInt() == 1){
     zero();
-    delay(1000);
+    delay(del);
     one();
-    delay(1000);
+    delay(del);
     two();
-    delay(1000);
+    delay(del);
     three();
-    delay(1000);
+    delay(del);
     four();
-    delay(1000);           
+    delay(del);           
     five();
-    delay(1000);
+    delay(del);
     six();
-    delay(1000);
+    delay(del);
     seven();
-    delay(1000);
+    delay(del);
     eight();
-    delay(1000);
+    delay(del);
     nine();
-    delay(1000);           
+    delay(del);           
     a();
-    delay(1000);
+    delay(del);
     b();
-    delay(1000);
+    delay(del);
     c();
-    delay(1000);
+    delay(del);
     d();
-    delay(1000);
+    delay(del);
     e();
-    delay(1000);
+    delay(del);
     f();
-    delay(1000);
-    goto count;
-    
+    delay(del);
+    Blynk.syncVirtual(V0);
+    }
+  else 
+  zero();
 }
 
 void setup() {
@@ -281,7 +284,7 @@ void setup() {
 }
 
 void loop() {
- 
+  
   Blynk.run();
   
 }
