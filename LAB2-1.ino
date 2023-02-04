@@ -3,7 +3,7 @@
 #include <BlynkSimpleEsp8266.h>
 
 #define BLYNK_AUTH_TOKEN "NkjVq23XELM5oV3sSJhPZ2XzgFWzuLE8"
-
+//wifi cred
 char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "adamseif";//wifi name
 char pass[] = "franasen23";//wifi password
